@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //escribe un programa que pida al usuario un número del 1 al 10 ambos incluido
+        //hasta que coincida con numero aleatorio del 1 al 10 ambos incluido
+        
+        function adivinaNum() {
+
+            // genero un numero aleatorio del 1 al 10 ambos incluido
+            const aleatorio = Math.floor(Math.random() * 10) + 1;
+
+        
+            let num = parseInt(prompt('Mete un número del 1 al 10 ambos incluido: '));
+
+            //mientras el numero introducido sea diferente añ generado, sigo preguntando
+            while(num !== aleatorio) {
+                document.write(num + "<br>");
+                num = parseInt(prompt('Mete un número del 1 al 10 ambos incluido: '));
+            }
+
+            if(num === aleatorio) {
+                document.write(num + ' es el número correcto');
+            }
+
+        }
+
+        //llamada función
+        adivinaNum();
+
+    </script>
+</body>
+</html>
