@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // realiza un programa que haga calculos de suma de 2 numeros pedidos al usuario y un operador pedido
+    // al usuario '+ - / *' y devuelva el resultado con switch
+    
+    let result;
+
+    const operator = prompt('Mete un operador de los 4 siguientes ( +, -, * ,/ ): ');
+
+    const num1 = parseFloat(prompt('Meter el primer número: '));
+    const num2 = parseFloat(prompt('Meter el segundo número: '));
+
+    switch(operator) {
+        case '+':
+            result = num1 + num2;
+            break;
+
+        case '-':
+            result = num1 - num2;
+            break;
+
+        case '*':
+            result = num1 * num2;
+            break;
+
+        case '/':
+            result = num1 / num2;
+            break;
+
+        default:
+            console.log('Operador no válido');
+        break;
+    }
+
+    document.write(`${num1} ${operator} ${num2} = ${result}`);
+
+    </script>
+</body>
+</html>
