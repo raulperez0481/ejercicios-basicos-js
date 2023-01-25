@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         /* Escribe un programa que devuelva el número de veces que aparece una letra en una cadena USANDO UNA FUNCION RECURSIVA.
+          Tu programa debería recibir una cadena y la letra. */
+        
+         function cuentaLetras(cad, letra, pos = 0, cont = 0) {
+         console.log(cad.length)
+            //condición base que acaba con la recursividad ya que la cadena llego a su fin
+            if (pos === cad.length) {
+                return cont;
+            } 
+            //si hay match sumo 1 al contador
+            else if (cad[pos] === letra) {
+                cont++;
+            }
+
+            //llamada recursiva
+            return cuentaLetras(cad, letra, pos + 1, cont);
+        }
+
+        const cad = "saregune";
+        const letra = "e";
+        console.log(cuentaLetras(cad, letra));
+
+    </script>
+</body>
+</html>

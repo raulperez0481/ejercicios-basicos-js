@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /*  Escribe un programa que devuelva el número de veces que aparece una letra en una cadena. Tu programa debería recibir una cadena y la letra.
+            solucionalo con un for
+        */
+
+        function letraCadena(cad, letra){
+            let coincidencia = 0
+                    
+             for(pos=0;pos < cad.length; pos++){
+                if (letra === cad[pos]){
+                        coincidencia = coincidencia + 1
+                    }
+                } 
+            
+            return coincidencia
+        }
+
+        const cadena = prompt("Mete una cadena")
+        const letra = prompt("Mete una letra")
+        console.log(letraCadena(cadena, letra))
+    </script>
+</body>
+</html>
