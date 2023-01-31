@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /*  Crea una función que devuelva la fecha del día de inicio de la semana actual y el día de fin de la misma
+       y la escriba por  pantalla
+       Ejemplo de salida : Desde 30/01/2023 al 05/02/2023 */
+
+    function firstLastDayCurrentWeek(){
+        const date = new Date();
+
+        //numero del dia actual de la semana
+        const day= date.getDay();
+
+        //numero del primer dia de la semana actual, sin el +1, empezaría por Sunday (domingo)
+        const first = (date.getDate() - day) +1;
+
+        //numero del ultimo día de la semana actual
+        const last = first + 6; 
+
+        //fechas completas del primer y último día de la semana
+        const firstday = new Date(date.setDate(first));
+        const lastday = new Date(date.setDate(last));
+        
+        //formateo las fechas completas dd/mm/aaaa
+        const desde = firstday.getDate() + "/" + (firstday.getMonth() +1) + "/" + firstday.getFullYear();
+        const hasta = lastday.getDate() + "/" + (lastday.getMonth() +1) + "/" + lastday.getFullYear();
+
+        return desde  + " al " + hasta;
+    }
+
+    document.write(firstLastDayCurrentWeek())
+    </script>
+
+</body>
+</html>
