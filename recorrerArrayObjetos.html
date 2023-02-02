@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//Muestra los datos de cada pelicula en una linea diferente
+
+const peliculas = [
+  {titulo: "The Matrix", director: "The Wachowski Brothers", año: 1999, genero: "Ciencia ficción", calificación: 8.7},
+  {titulo: "Inception", director: "Christopher Nolan", año: 2010, genero: "Sci-Fi", calificación: 8.8},
+  {titulo: "The Shawshank Redemption", director: "Frank Darabont", año: 1994, genero: "Drama", calificación: 9.3},
+];
+
+const resultados = peliculas.map(function (pelicula) {
+  return `Título: ${pelicula.titulo}, Director: ${pelicula.director}, Año: ${pelicula.año}, Género: ${pelicula.genero}, Calificación: ${pelicula.calificación}`;
+});
+
+resultados.forEach(function (resultado) {
+  document.write(`${resultado}<br>`);
+});
+
+    
+
+    </script>
+</body>
+</html>
