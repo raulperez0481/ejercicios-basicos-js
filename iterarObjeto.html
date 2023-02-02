@@ -8,16 +8,33 @@
 </head>
 <body>
     <script>
-    const student = {
-        name: 'Monica',
-        class: 7,
-        age: 12
-    }
 
-    // using for...in
-    for ( let clave in student ) {
-        console.log(`${clave} => ${student[clave]}`);
-    }
+/* Crea un objeto llamado "pelicula" que tenga 5 propiedades: "titulo", "director", "año", "genero" y "calificación". Cada propiedad debe tener un valor diferente.
+Usa un for-in loop para iterar(recorrer) sobre el objeto "peliculas" y mostrar en la consola cada propiedad y su valor,
+ haz lo mismo con el objeto Object, con 2 métodos diferentes
+ */
+
+ const pelicula = {
+  titulo: "The Matrix",
+  director: "The Wachowski Brothers",
+  ano: 1999,
+  genero: "Ciencia ficción",
+  calificacion: 8.7
+};
+
+
+for (let propiedad in pelicula) {
+  console.log( propiedad + ": " + pelicula[propiedad]);
+}
+
+Object.keys(pelicula).forEach(function (propiedad) {
+  console.log(propiedad + ": " + pelicula[propiedad]);
+});
+
+Object.entries(pelicula).forEach(function ([propiedad, valor]) {
+  console.log(propiedad + ": " + valor);
+});
+
     </script>
 </body>
 </html>
