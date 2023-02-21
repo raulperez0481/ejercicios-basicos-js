@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         /* crea un cronómetro muestre por pantalla cada vez que pasa un segundo. Después de 10 segundos, se detiene el cronómetro. */
+
+
+let startTime;
+let currentTime;
+let timerId;
+
+const startTimer = () => {
+  startTime = new Date();
+  timerId = setInterval(() => {
+    currentTime = new Date();
+    let elapsedTime = currentTime - startTime;
+    document.write(Math.round(elapsedTime / 1000) + ' segundo <br>');
+  }, 1000);
+};
+
+const stopTimer = () => {
+  clearInterval(timerId);
+};
+
+startTimer();
+
+// stop the timer after 10 seconds
+setTimeout(() => {
+  stopTimer();
+}, 11000);
+
+
+
+    </script>
+</body>
+</html>

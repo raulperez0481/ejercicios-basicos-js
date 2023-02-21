@@ -17,9 +17,12 @@
 
         //numero del dia actual de la semana
         const day= date.getDay();
+        console.log("numero del dia en la semana actual "+day)
+        console.log(date.getDate())
 
         //numero del primer dia de la semana actual, sin el +1, empezaría por Sunday (domingo)
         const first = (date.getDate() - day) +1;
+        console.log(first)
 
         //numero del ultimo día de la semana actual
         const last = first + 6; 
